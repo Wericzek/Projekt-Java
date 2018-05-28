@@ -5,7 +5,7 @@ public class baza {
 
 	public static void main(String[] args) throws SQLException {
 
-		String connectionUrl = "jdbc:sqlite:D:/WERI/javadb/Zawodnicy.db";
+		String connectionUrl = "jdbc:sqlite:D:/WERI/javadb/BazaProjekt.db";
 
          DriverManager.registerDriver(new org.sqlite.JDBC());
          Connection con = DriverManager.getConnection(connectionUrl);
@@ -22,6 +22,8 @@ public class baza {
          rs.close();
          st.close();
          con.close();
+         System.out.println('w');
+         
 
 	}
 
