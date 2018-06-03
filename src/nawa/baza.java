@@ -27,7 +27,7 @@ public class baza {
 		st.close();
 		con.close();
 		System.out.println('a');
-		System.out.println("bba");
+		System.out.println("zmiana");
 
 	}
 
