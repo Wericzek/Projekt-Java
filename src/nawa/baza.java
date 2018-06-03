@@ -15,19 +15,31 @@ public class baza {
 		DriverManager.registerDriver(new org.sqlite.JDBC());
 		Connection con = DriverManager.getConnection(connectionUrl);
 
-		String SQL = "SELECT * FROM club;";
+		String SQL = "SELECT * FROM player;";
+		String Coach = "SELECT * FROM coach;";
+		
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(SQL);
+		
+		Statement coach = con.createStatement();
+		ResultSet rcoach = coach.executeQuery(Coach);
 
 		while (rs.next()) {
-			System.out.println(rs.getInt("id") + " - " + rs.getString("name"));
+			System.out.println(rs.getInt("id") + " - " + rs.getString("first_name") + " " + rs.getString("surname"));
+			
+		}
+		while(rcoach.next()) {
+			System.out.println(rcoach.getInt("id") + "-" + rcoach.getString("first_name") + " "+rcoach.getString("surname"));
 		}
 
 		rs.close();
 		st.close();
+		coach.close();
+		rcoach.close();
 		con.close();
-		System.out.println('a');
-		System.out.println("zmiana");
+		
+		
+		
 
 	}
 
