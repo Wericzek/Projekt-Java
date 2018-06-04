@@ -7,3 +7,10 @@
 2018-06-04 16:22:25,723 DEBUG [main] - log4j.pack.Log4j.main 34 - 2 - Piotr Nowakowski
 2018-06-04 16:22:25,723 DEBUG [main] - log4j.pack.Log4j.main 39 - 1-Anna Dziarkowska
 2018-06-04 16:22:25,723 DEBUG [main] - log4j.pack.Log4j.main 39 - 2-Ewelina Kielbasa
+2018-06-04 22:12:03,080 DEBUG [main] - log4j.pack.Log4j.main 34 - 1 - Bartosz Kurek
+2018-06-04 22:12:03,080 DEBUG [main] - log4j.pack.Log4j.main 34 - 2 - Piotr Nowakowski
+2018-06-04 22:12:03,080 DEBUG [main] - log4j.pack.Log4j.main 39 - 1-Anna Dziarkowska
+2018-06-04 22:12:03,088 DEBUG [main] - log4j.pack.Log4j.main 39 - 2-Ewelina Kielbasa
+2018-06-04 23:35:28,174 DEBUG [main] - log4j.pack.Log4j.searchByName 77 - 1-Bartosz Kurek
+2018-06-04 23:35:28,174 DEBUG [main] - log4j.pack.Log4j.searchByName 77 - 2-Piotr Nowakowski
+2018-06-04 23:38:06,957 DEBUG [main] - log4j.pack.Log4j.searchByName 77 - 2-Piotr Nowakowski
