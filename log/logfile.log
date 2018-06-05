@@ -1,16 +1,10 @@
-2018-06-04 16:05:53,147 DEBUG [main] - nawa.Log4j.main 10 - testmessage
-2018-06-04 16:10:20,790 DEBUG [main] - logpack.Log4j.main 10 - testmessage
-2018-06-04 16:14:38,328 DEBUG [main] - log4j.pack.Log4j.main 10 - testmessage
-2018-06-04 16:19:16,718 DEBUG [main] - log4j.pack.Log4j.main 37 - 1 - Bartosz Kurek
-2018-06-04 16:19:16,718 DEBUG [main] - log4j.pack.Log4j.main 37 - 2 - Piotr Nowakowski
-2018-06-04 16:22:25,708 DEBUG [main] - log4j.pack.Log4j.main 34 - 1 - Bartosz Kurek
-2018-06-04 16:22:25,723 DEBUG [main] - log4j.pack.Log4j.main 34 - 2 - Piotr Nowakowski
-2018-06-04 16:22:25,723 DEBUG [main] - log4j.pack.Log4j.main 39 - 1-Anna Dziarkowska
-2018-06-04 16:22:25,723 DEBUG [main] - log4j.pack.Log4j.main 39 - 2-Ewelina Kielbasa
-2018-06-04 22:12:03,080 DEBUG [main] - log4j.pack.Log4j.main 34 - 1 - Bartosz Kurek
-2018-06-04 22:12:03,080 DEBUG [main] - log4j.pack.Log4j.main 34 - 2 - Piotr Nowakowski
-2018-06-04 22:12:03,080 DEBUG [main] - log4j.pack.Log4j.main 39 - 1-Anna Dziarkowska
-2018-06-04 22:12:03,088 DEBUG [main] - log4j.pack.Log4j.main 39 - 2-Ewelina Kielbasa
-2018-06-04 23:35:28,174 DEBUG [main] - log4j.pack.Log4j.searchByName 77 - 1-Bartosz Kurek
-2018-06-04 23:35:28,174 DEBUG [main] - log4j.pack.Log4j.searchByName 77 - 2-Piotr Nowakowski
-2018-06-04 23:38:06,957 DEBUG [main] - log4j.pack.Log4j.searchByName 77 - 2-Piotr Nowakowski
+2018-06-05 00:34:06,369 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 79 - 2-Piotr Nowakowski
+2018-06-05 01:08:35,471 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
+2018-06-05 01:09:11,821 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
+2018-06-05 01:10:26,196 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
+2018-06-05 01:17:41,445 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 101 - 2-Piotr Nowakowski
+2018-06-05 08:26:15,962 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
+2018-06-05 08:26:15,965 DEBUG [main] - log4j.pack.Log4j.displayLinkedList 113 - nawa.Player@50134894
+2018-06-05 08:26:15,965 DEBUG [main] - log4j.pack.Log4j.displayLinkedList 113 - nawa.Player@2957fcb0
+2018-06-05 08:39:47,066 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 101 - 2-Piotr Nowakowski
+2018-06-05 08:40:12,504 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 106 - 2-Piotr Nowakowski

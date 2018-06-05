@@ -9,8 +9,12 @@ public class Coach {
 	String login;
 	String password;
 		
-	public Coach() {
-		
+	public Coach(int id, String n, String s, String l, String p) {
+		ID = id;
+		first_name = n;
+		surname = s;
+		login = l;
+		password = p;
 	}
 	
 
