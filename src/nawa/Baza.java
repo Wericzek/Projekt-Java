@@ -21,6 +21,7 @@ public class Baza {
 	static Connection con;
 	Player player;
 	Coach  coach;
+	String real_password = null;
 		
 	public Baza() throws SQLException {
 		DriverManager.registerDriver(new org.sqlite.JDBC());
@@ -111,6 +112,23 @@ public class Baza {
 			
 		}
 		
+		public String getPassword(String login) throws SQLException {
+			Statement st_pswd = con.createStatement();
+			String zapytanie = "SELECT * from player where login='"+login+"';";
+			ResultSet rt_pswd = st_pswd.executeQuery(zapytanie);
+			
+			
+			while(rt_pswd.next()) {
+				real_password = rt_pswd.getString("password");
+			}
+			st_pswd.close();
+			rt_pswd.close();
+		
+			
+			return real_password;
+		}
+		
+		
 		public void displayLinkedList(char player_or_coach) {
 			if( player_or_coach == 'p') {
 				for(int i = 0; i < playersList.size(); i++) {
@@ -126,7 +144,7 @@ public class Baza {
 		    }
 		}
 
-
+       
 
 }
 
