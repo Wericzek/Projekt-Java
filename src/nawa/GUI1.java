@@ -91,9 +91,14 @@ import java.sql.SQLException;
 				public void mouseClicked(MouseEvent arg0) {
 					
 					
-					/*baza.getPassword(txtUsername.getText());
+/*					try {
+						baza.getPassword(txtUsername.getText());
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					if(baza.real_password == txtPassword.getText()) {
-						GUI2.DatabaseWindow();
+						GUI2.CoachWindow();
 					}*/
 					
 					if(coach_alert == true) {
