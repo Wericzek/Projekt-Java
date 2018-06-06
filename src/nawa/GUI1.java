@@ -102,7 +102,7 @@ import java.sql.SQLException;
 					}*/
 					
 					if(coach_alert == true) {
-					GUI2.CoachWindow();
+						GUI2.CoachWindow();
 					}
 					else {
 						GUI3.PlayerWindow();
