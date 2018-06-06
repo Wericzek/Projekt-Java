@@ -1,3 +1,4 @@
+package nawa;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -13,6 +14,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 
 
@@ -23,6 +27,10 @@ import javax.swing.JTextField;
 		private JTextField txtUsername;
 		private JPasswordField txtPassword;
 		private final Action action = new SwingAction();
+		boolean coach_alert=false;
+		String password=null;
+		String username=null;
+		Baza baza;
 
 
 		public static void main(String[] args) {
@@ -36,6 +44,7 @@ import javax.swing.JTextField;
 					}
 				}
 			});
+			
 		}
 
 
@@ -68,14 +77,36 @@ import javax.swing.JTextField;
 			frame.getContentPane().add(txtPassword);
 			
 			JButton btnLogin = new JButton("Login");
+			
 			btnLogin.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
-					String username = txtUsername.getText();
-					String password = txtPassword.getText();
-					
+					 username = txtUsername.getText();
+					 password = txtPassword.getText();
+
 				}
 			});
+			btnLogin.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent arg0) {
+					
+					
+					/*baza.getPassword(txtUsername.getText());
+					if(baza.real_password == txtPassword.getText()) {
+						GUI2.DatabaseWindow();
+					}*/
+					
+					if(coach_alert == true) {
+					GUI2.CoachWindow();
+					}
+					else {
+						GUI3.PlayerWindow();
+					}
+						
+
+				}
+			});
+
 			btnLogin.setBounds(295, 153, 89, 23);
 			frame.getContentPane().add(btnLogin);
 			
@@ -95,6 +126,11 @@ import javax.swing.JTextField;
 			JButton btnExit = new JButton("Exit");
 			btnExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+				 JFrame exitFrame = new JFrame("Exit");
+					if(JOptionPane.showConfirmDialog(exitFrame, "Confirm if you want to exit", "Players Database",
+							JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+							System.exit(0);
+					}		
 				}
 			});
 			btnExit.setBounds(335, 227, 89, 23);
@@ -103,11 +139,9 @@ import javax.swing.JTextField;
 			JRadioButton rdbtnCoach = new JRadioButton("coach");
 			rdbtnCoach.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);
-/*					JFrame exitFrame = new JFrame("Exit");
-					if(JOptionPane.showConfirmDialog(exitFrame, "Confirm if you want to exit", "Players Database", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
-							System.exit(0);
-					}*/			
+					if( rdbtnCoach.isSelected() == true) {
+						coach_alert = true;
+					}
 				}
 			});
 			rdbtnCoach.setBounds(75, 153, 109, 23);
