@@ -27,7 +27,7 @@ public class Baza {
 		DriverManager.registerDriver(new org.sqlite.JDBC());
 		con = DriverManager.getConnection(connectionUrl);
 
-		
+
 	}
 
 	public static void main(String[] args) throws SQLException  {
@@ -112,18 +112,23 @@ public class Baza {
 			
 		}
 		
-		public String getPassword(String login) throws SQLException {
+		public void addPlayer(Player player) throws SQLException{
+			Statement statement = con.createStatement();
+			String zapytanie = "INSERT INTO Player (first_name, surname) ; VALUES ('" + player.getFirstName() + "', '" + player.getSurname() + "')";
+			statement.executeQuery(zapytanie);
+		}
+		
+		public String getPassword(String login, String table) throws SQLException {
 			Statement st_pswd = con.createStatement();
-			String zapytanie = "SELECT * from player where login='"+login+"';";
+			String zapytanie = "SELECT * from '" + table + "' where login='"+login+"';";
 			ResultSet rt_pswd = st_pswd.executeQuery(zapytanie);
-			
 			
 			while(rt_pswd.next()) {
 				real_password = rt_pswd.getString("password");
 			}
+			
 			st_pswd.close();
 			rt_pswd.close();
-		
 			
 			return real_password;
 		}

@@ -7,15 +7,16 @@ import javax.swing.JFrame;
 public class GUI3 {
 
 	private JFrame frame;
-
+	private Baza baza;
+	
 	/**
 	 * Launch the application.
 	 */
-	public static void PlayerWindow() {
+	public static void PlayerWindow(Baza baza) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI3 window = new GUI3();
+					GUI3 window = new GUI3(baza);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,8 +28,9 @@ public class GUI3 {
 	/**
 	 * Create the application.
 	 */
-	public GUI3() {
+	public GUI3(Baza baza) {
 		initialize();
+		this.baza = baza;
 	}
 
 	/**

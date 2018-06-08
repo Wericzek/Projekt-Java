@@ -25,7 +25,8 @@ import java.sql.SQLException;
 
 		private JFrame frame;
 		private JTextField txtUsername;
-		private JPasswordField txtPassword;
+		private JPasswordField txtPassword; 
+		private JRadioButton rdbtnCoach;
 		private final Action action = new SwingAction();
 		boolean coach_alert=false;
 		String password=null;
@@ -34,21 +35,26 @@ import java.sql.SQLException;
 
 
 		public static void main(String[] args) {
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
-					try {
-						GUI1 window = new GUI1();
-						window.frame.setVisible(true);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			});
 			
+			try {
+				Baza baza = new Baza();
+				
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						GUI1 window = new GUI1(baza);
+						window.frame.setVisible(true);
+					}
+				});			
+			} catch (SQLException e1) {
+				System.out.println("Nie mozna sie polaczyc z baza");
+				e1.printStackTrace();
+			}
+	
 		}
 
 
-		public GUI1() {
+		public GUI1(Baza baza) {
+			this.baza = baza;
 			initialize();
 		}
 
@@ -83,32 +89,35 @@ import java.sql.SQLException;
 					
 					 username = txtUsername.getText();
 					 password = txtPassword.getText();
-
-				}
-			});
-			btnLogin.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseClicked(MouseEvent arg0) {
-					
-					
-/*					try {
-						baza.getPassword(txtUsername.getText());
-					} catch (SQLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					if(baza.real_password == txtPassword.getText()) {
-						GUI2.CoachWindow();
-					}*/
-					
-					if(coach_alert == true) {
-						GUI2.CoachWindow();
-					}
-					else {
-						GUI3.PlayerWindow();
-					}
+					 
+					 System.out.println("Action event happened");
+					 
+					 try {
+							
+							if(rdbtnCoach.isSelected()) {
+								String pass = baza.getPassword(txtUsername.getText(), "Coach"); 
+								if(pass.equals(txtPassword.getText())) {
+										GUI2.CoachWindow(baza);
+								} else {
+									System.out.println("Haslo jest nie poprawne");
+									// zrobic wyswietlenie informacji o niepoprawnym hasle
+								}
+							} else {
+								String pass = baza.getPassword(txtUsername.getText(), "Player"); 
+								if(pass.equals(txtPassword.getText())) {
+										GUI3.PlayerWindow(baza);
+								} else {
+									System.out.println("Haslo jest nie poprawne");
+									// zrobic wyswietlenie informacji o niepoprawnym hasle
+								}
+							}
+							
+						} catch (SQLException ex) {
+							// TODO Auto-generated catch block
+							ex.printStackTrace();
+						}
 						
-
+					 
 				}
 			});
 
@@ -141,16 +150,11 @@ import java.sql.SQLException;
 			btnExit.setBounds(335, 227, 89, 23);
 			frame.getContentPane().add(btnExit);
 			
-			JRadioButton rdbtnCoach = new JRadioButton("coach");
-			rdbtnCoach.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					if( rdbtnCoach.isSelected() == true) {
-						coach_alert = true;
-					}
-				}
-			});
+			rdbtnCoach = new JRadioButton("coach");
 			rdbtnCoach.setBounds(75, 153, 109, 23);
 			frame.getContentPane().add(rdbtnCoach);
+			
+			frame.setVisible(true);
 		}
 		private class SwingAction extends AbstractAction {
 			public SwingAction() {

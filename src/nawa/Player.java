@@ -25,4 +25,14 @@ public class Player {
 		positionID = pos;
 		clubID = c_id;
 	}
+	
+	public String getFirstName() {
+		return first_name;
+	}
+	
+	public String getSurname() {
+		return surname;
+	}
+	
 }
+

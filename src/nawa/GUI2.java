@@ -1,23 +1,27 @@
 package nawa;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JTextPane;
 import java.awt.BorderLayout;
+import javax.swing.JButton;
 
 public class GUI2 {
 
 	private JFrame frame;
+	private Baza baza;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void CoachWindow() {
+	public static void CoachWindow(Baza baza) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI2 window = new GUI2();
+					GUI2 window = new GUI2(baza);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -29,8 +33,10 @@ public class GUI2 {
 	/**
 	 * Create the application.
 	 */
-	public GUI2() {
+	public GUI2(Baza baza) {
 		initialize();
+		this.baza = baza;
+		System.out.println("Created GUI2");
 	}
 
 	/**
@@ -40,13 +46,22 @@ public class GUI2 {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JTextPane textPane = new JTextPane();
-		frame.getContentPane().add(textPane, BorderLayout.CENTER);
+		frame.getContentPane().setLayout(null);
 		
 		JTextPane txtTitle = new JTextPane();
+		txtTitle.setBounds(0, 0, 434, 20);
 		txtTitle.setText("Coach Mode");
-		frame.getContentPane().add(txtTitle, BorderLayout.NORTH);
+		frame.getContentPane().add(txtTitle);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(25, 41, 89, 36);
+		frame.getContentPane().add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				
+			}
+		});
+		
 	}
 
 }

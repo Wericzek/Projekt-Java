@@ -1,10 +1,1 @@
-2018-06-05 00:34:06,369 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 79 - 2-Piotr Nowakowski
-2018-06-05 01:08:35,471 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
-2018-06-05 01:09:11,821 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
-2018-06-05 01:10:26,196 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
-2018-06-05 01:17:41,445 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 101 - 2-Piotr Nowakowski
-2018-06-05 08:26:15,962 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 102 - 2-Piotr Nowakowski
-2018-06-05 08:26:15,965 DEBUG [main] - log4j.pack.Log4j.displayLinkedList 113 - nawa.Player@50134894
-2018-06-05 08:26:15,965 DEBUG [main] - log4j.pack.Log4j.displayLinkedList 113 - nawa.Player@2957fcb0
-2018-06-05 08:39:47,066 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 101 - 2-Piotr Nowakowski
-2018-06-05 08:40:12,504 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 106 - 2-Piotr Nowakowski
+2018-06-08 15:24:25,127 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
