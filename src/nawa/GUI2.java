@@ -53,15 +53,42 @@ public class GUI2 {
 		txtTitle.setText("Coach Mode");
 		frame.getContentPane().add(txtTitle);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(25, 41, 89, 36);
-		frame.getContentPane().add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnShowProfile = new JButton("Show Profile");
+		btnShowProfile.setBounds(20, 30, 150, 30);
+		frame.getContentPane().add(btnShowProfile);
+		btnShowProfile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				
+		
 			}
 		});
 		
+		JButton btnShowPlayers = new JButton("Show Players");
+		btnShowPlayers.setBounds(20, 70, 150, 30);
+		frame.getContentPane().add(btnShowPlayers);
+		btnShowPlayers.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+		
 	}
+		});
 
+		JButton btnAddPlayer = new JButton("Add Player");
+		btnAddPlayer.setBounds(20, 110, 150, 30);
+		frame.getContentPane().add(btnAddPlayer);
+		btnAddPlayer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+		
+	}
+		});
+		
+		JButton btnAddMatch = new JButton("Add Match");
+		btnAddMatch.setBounds(20, 150, 150, 30);
+		frame.getContentPane().add(btnAddMatch);
+		btnAddMatch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+		
+	}
+		});
+
+
+}
 }
