@@ -114,7 +114,7 @@ public class Baza {
 		
 		public void addPlayer(Player player) throws SQLException{
 			Statement statement = con.createStatement();
-			String zapytanie = "INSERT INTO Player (first_name, surname) ; VALUES ('" + player.getFirstName() + "', '" + player.getSurname() + "')";
+			String zapytanie = "INSERT INTO Player (first_name, surname) ; VALUES ('" + player.getFirst_Name() + "', '" + player.getSurname() + "')";
 			statement.executeQuery(zapytanie);
 		}
 		

@@ -17,5 +17,36 @@ public class Coach {
 		password = p;
 	}
 	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int ID) {
+		this.ID=ID;
+	}
+	public String getFirst_Name() {
+		return first_name;
+	}
+	public void setFirst_Name(String first_name) {
+		this.first_name=first_name;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname=surname;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login=login;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password=password;
+	}
+	
 
 }
