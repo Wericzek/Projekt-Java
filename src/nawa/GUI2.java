@@ -69,25 +69,33 @@ public class GUI2 {
 		frame.getContentPane().add(btnShowPlayers);
 		btnShowPlayers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-		
-	}
-		});
+				try {
+					Player search = baza.showAllPlayers(name);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+				});
+				
+	
 		JButton btnShowClub = new JButton("Show Club");
 		btnShowClub.setBounds(20, 110, 150, 30);
 		frame.getContentPane().add(btnShowClub);
-		btnShowPlayers.addActionListener(new ActionListener() {
+		btnShowClub.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 		
 	}
 		});
+		
 		JButton btnAddPlayer = new JButton("Add Player");
 		btnAddPlayer.setBounds(20, 150, 150, 30);
 		frame.getContentPane().add(btnAddPlayer);
 		btnAddPlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-		
-		System.out.println("cos");
-	}
+				
+			}
 		});
 		
 		JButton btnAddMatch = new JButton("Add Match");
@@ -112,3 +120,4 @@ public class GUI2 {
 
 }
 }
+

@@ -1,2 +1,12 @@
-2018-06-08 15:24:25,127 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
-2018-06-08 22:58:13,815 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
+2018-06-09 13:31:19,084 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
+2018-06-09 14:04:00,622 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
+2018-06-09 14:04:07,423 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
+2018-06-09 14:04:27,354 DEBUG [main] - log4j.pack.Log4j.searchByFirstName 107 - 2-Piotr Nowakowski
+2018-06-09 14:06:21,322 DEBUG [main] - log4j.pack.Log4j.searchByFirstName2 120 - 1-Bartosz Kurek
+2018-06-09 14:06:21,333 DEBUG [main] - log4j.pack.Log4j.searchByFirstName2 120 - 2-Piotr Nowakowski
+2018-06-09 14:06:49,642 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName2 120 - 1-Bartosz Kurek
+2018-06-09 14:06:49,650 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName2 120 - 2-Piotr Nowakowski
+2018-06-09 14:08:13,494 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 120 - 1-Bartosz Kurek
+2018-06-09 14:08:13,498 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 120 - 2-Piotr Nowakowski
+2018-06-09 14:11:59,234 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.showAllPlayers 120 - 1-Bartosz Kurek
+2018-06-09 14:11:59,237 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.showAllPlayers 120 - 2-Piotr Nowakowski

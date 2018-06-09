@@ -32,11 +32,12 @@ public class Baza {
 
 	public static void main(String[] args) throws SQLException  {
        Baza baza = new Baza();
-       
+       String name = null;
+	baza.showAllPlayers(name);
        //testy 
-       baza.loadPlayers();
-       baza.searchByFirstName("Piotr");
-       con.close();
+      // baza.loadPlayers();
+      // baza.searchByFirstName("Piotr");
+       //con.close();
        
        
        
@@ -102,6 +103,18 @@ public class Baza {
 		public Player searchByFirstName(String name) throws SQLException {
 			Statement st_name = con.createStatement();
 			String zapytanie = "SELECT * from player where first_name='"+name+"';";
+			ResultSet rt_name = st_name.executeQuery(zapytanie);
+			while(rt_name.next()) {
+				log.debug(rt_name.getInt("id") + "-" + rt_name.getString("first_name") + " "+rt_name.getString("surname"));
+			}
+			st_name.close();
+			rt_name.close();
+			return null;
+			
+		}
+		public Player showAllPlayers(String name) throws SQLException {
+			Statement st_name = con.createStatement();
+			String zapytanie = "SELECT * from player";
 			ResultSet rt_name = st_name.executeQuery(zapytanie);
 			while(rt_name.next()) {
 				log.debug(rt_name.getInt("id") + "-" + rt_name.getString("first_name") + " "+rt_name.getString("surname"));
