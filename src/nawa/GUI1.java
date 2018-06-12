@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -14,9 +15,10 @@ import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.sql.SQLException;
+
+import org.apache.log4j.Logger;
+
+import log4j.pack.Log4j;
 
 
 
@@ -32,6 +34,7 @@ import java.sql.SQLException;
 		String password=null;
 		String username=null;
 		Baza baza;
+		Logger log =  Logger.getLogger(Log4j.class);
 
 
 		public static void main(String[] args) {
@@ -90,7 +93,7 @@ import java.sql.SQLException;
 					 username = txtUsername.getText();
 					 password = txtPassword.getText();
 					 
-					 System.out.println("Action event happened");
+					log.debug("Action event happened");
 					 
 					 try {
 							
@@ -98,15 +101,19 @@ import java.sql.SQLException;
 								String pass = baza.getPassword(txtUsername.getText(), "Coach"); 
 								if(pass.equals(txtPassword.getText())) {
 										GUI2.CoachWindow(baza);
-								} else {
-									System.out.println("Haslo jest nie poprawne");
-									// zrobic wyswietlenie informacji o niepoprawnym hasle
+								} 
+							    else {
+								JFrame errorFrame = new JFrame("Wrong Password or Login");
+								JOptionPane.showMessageDialog(errorFrame, "Incorrect Login or Password");
+								
 								}
-							} else {
+							}
+							else {
 								String pass = baza.getPassword(txtUsername.getText(), "Player"); 
 								if(pass.equals(txtPassword.getText())) {
 										GUI3.PlayerWindow(baza);
-								} else {
+								}
+								else {
 									System.out.println("Haslo jest nie poprawne");
 									// zrobic wyswietlenie informacji o niepoprawnym hasle
 								}
@@ -140,6 +147,12 @@ import java.sql.SQLException;
 			JButton btnExit = new JButton("Exit");
 			btnExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+				try {
+					baza.con.close();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				 JFrame exitFrame = new JFrame("Exit");
 					if(JOptionPane.showConfirmDialog(exitFrame, "Confirm if you want to exit", "Players Database",
 							JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {

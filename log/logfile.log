@@ -10,3 +10,51 @@
 2018-06-09 14:08:13,498 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 120 - 2-Piotr Nowakowski
 2018-06-09 14:11:59,234 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.showAllPlayers 120 - 1-Bartosz Kurek
 2018-06-09 14:11:59,237 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.showAllPlayers 120 - 2-Piotr Nowakowski
+2018-06-12 13:03:10,003 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:03:12,081 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:03:12,728 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:03:13,856 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:11:59,092 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:12:00,335 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:12:01,578 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:12:21,480 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:13:49,290 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:13:51,002 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:16:57,667 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:23:07,646 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:23:33,280 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:24:38,442 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:25:03,279 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:30:30,430 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:35:14,474 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:35:40,399 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:35:48,823 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:35:55,762 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:37:17,467 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:40:32,971 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:40:38,500 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 13:42:44,352 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.showAllPlayers 120 - 1-Bartosz Kurek
+2018-06-12 13:42:44,352 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.showAllPlayers 120 - 2-Piotr Nowakowski
+2018-06-12 15:43:04,479 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:43:55,039 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 109 - 2-Piotr Nowakowski
+2018-06-12 15:44:55,958 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 121 - 1-Bartosz Kurek
+2018-06-12 15:44:55,964 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 121 - 2-Piotr Nowakowski
+2018-06-12 15:45:20,519 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:45:26,398 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 109 - 2-Piotr Nowakowski
+2018-06-12 15:48:15,533 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 123 - 1-Bartosz Kurek
+2018-06-12 15:48:15,538 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 123 - 2-Piotr Nowakowski
+2018-06-12 15:48:38,136 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:48:42,595 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 15:48:43,798 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 15:51:35,937 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:51:43,249 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 15:54:14,655 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:54:19,420 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 15:55:39,227 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:55:44,003 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 15:57:08,832 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:57:13,987 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 15:59:43,350 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 15:59:48,420 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 16:02:30,423 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 16:02:34,961 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski

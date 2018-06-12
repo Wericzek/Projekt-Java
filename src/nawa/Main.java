@@ -3,8 +3,13 @@ package nawa;
 import java.awt.EventQueue;
 import java.sql.SQLException;
 
+import org.apache.log4j.Logger;
+
+import log4j.pack.Log4j;
+
 public class Main {
 
+	static Logger log = Logger.getLogger(Log4j.class);
 	public static void main(String[] args) {
 		
 		try {
@@ -16,7 +21,7 @@ public class Main {
 				}
 			});			
 		} catch (SQLException e1) {
-			System.out.println("Nie mozna sie polaczyc z baza");
+			log.debug("Nie mozna sie polaczyc z baza");
 			e1.printStackTrace();
 		}
 		

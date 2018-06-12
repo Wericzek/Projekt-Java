@@ -92,5 +92,11 @@ public class Player {
 		this.clubID=clubID;
 	}
 
+	public String display() {
+		String PlayersData = "\nname: " + first_name + "\n" + "Surname: " + surname + "\n" + "Age:" + age + "\n" +
+	                         "Height: " + height + "\n" + "Spike: " + spike + "\n" + "Block: " + block + "\n" + "club: " +
+				             clubID + "\n";
+		return PlayersData;
+	}
 }
 

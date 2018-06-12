@@ -18,7 +18,7 @@ public class Baza {
 	LinkedList<Coach> coachesList =  new LinkedList<Coach>();
 	static LinkedList<Player> playersList = new LinkedList<Player>();
 	int index;
-	static Connection con;
+	Connection con;
 	Player player;
 	Coach  coach;
 	String real_password = null;
@@ -26,14 +26,16 @@ public class Baza {
 	public Baza() throws SQLException {
 		DriverManager.registerDriver(new org.sqlite.JDBC());
 		con = DriverManager.getConnection(connectionUrl);
-
+	      loadPlayers();
+	      loadCoaches();
 
 	}
 
 	public static void main(String[] args) throws SQLException  {
        Baza baza = new Baza();
        String name = null;
-	baza.showAllPlayers(name);
+
+	   baza.showAllPlayers(name);
        //testy 
       // baza.loadPlayers();
       // baza.searchByFirstName("Piotr");
@@ -100,35 +102,36 @@ public class Baza {
 			
 		}
 		
-		public Player searchByFirstName(String name) throws SQLException {
+		public int searchByFirstName(String name) throws SQLException {
 			Statement st_name = con.createStatement();
 			String zapytanie = "SELECT * from player where first_name='"+name+"';";
 			ResultSet rt_name = st_name.executeQuery(zapytanie);
+			int ID = rt_name.getInt("ID");
 			while(rt_name.next()) {
 				log.debug(rt_name.getInt("id") + "-" + rt_name.getString("first_name") + " "+rt_name.getString("surname"));
 			}
 			st_name.close();
 			rt_name.close();
-			return null;
+			return ID;
 			
 		}
 		public Player showAllPlayers(String name) throws SQLException {
-			Statement st_name = con.createStatement();
+			Statement st_showAll = con.createStatement();
 			String zapytanie = "SELECT * from player";
-			ResultSet rt_name = st_name.executeQuery(zapytanie);
-			while(rt_name.next()) {
-				log.debug(rt_name.getInt("id") + "-" + rt_name.getString("first_name") + " "+rt_name.getString("surname"));
+			ResultSet rt_showAll= st_showAll.executeQuery(zapytanie);
+			while(rt_showAll.next()) {
+				log.debug(rt_showAll.getInt("id") + "-" + rt_showAll.getString("first_name") + " "+rt_showAll.getString("surname"));
 			}
-			st_name.close();
-			rt_name.close();
+			st_showAll.close();
+			rt_showAll.close();
 			return null;
 			
 		}
 		
 		public void addPlayer(Player player) throws SQLException{
-			Statement statement = con.createStatement();
+			Statement st_Player = con.createStatement();
 			String zapytanie = "INSERT INTO Player (first_name, surname) ; VALUES ('" + player.getFirst_Name() + "', '" + player.getSurname() + "')";
-			statement.executeQuery(zapytanie);
+			st_Player.executeQuery(zapytanie);
 		}
 		
 		public String getPassword(String login, String table) throws SQLException {
@@ -147,19 +150,24 @@ public class Baza {
 		}
 		
 		
-		public void displayLinkedList(char player_or_coach) {
+		public String displayLinkedList(char player_or_coach, int id) {
+		    String stats = "";
 			if( player_or_coach == 'p') {
-				for(int i = 0; i < playersList.size(); i++) {
+/*				for(int i = 0; i < playersList.size(); i++) {
 						log.debug(playersList.get(i));
-					}
+					}*/
+				stats = playersList.get(id-1).display();
 			}
 			
 			else if( player_or_coach == 'c') {
-				for(int i = 0; i < coachesList.size(); i++) {
+	/*			for(int i = 0; i < coachesList.size(); i++) {
 					log.debug(coachesList.get(i));
-				}
+				}*/
+				stats = coachesList.get(id-1).display();
 					
 		    }
+			
+			return stats;
 		}
 
        

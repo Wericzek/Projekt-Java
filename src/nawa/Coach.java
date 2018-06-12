@@ -48,5 +48,10 @@ public class Coach {
 		this.password=password;
 	}
 	
+	public String display() {
+		String CoachesData = "\nname: " + first_name + "\n" + "Surname: " + surname + "\n";
+		return CoachesData;
+	}
+	
 
 }
