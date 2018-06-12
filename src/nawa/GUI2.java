@@ -21,7 +21,7 @@ public class GUI2 {
 	private Baza baza;
 	String name=null;
 	private JTextField textSearchBy;
-	int PlayerID = 0;
+	String PlayerData = "";
 
 	/**
 	 * Launch the application.
@@ -146,8 +146,8 @@ public class GUI2 {
 				if(chckbxFirstName.isSelected() == true) {
 					String name = textSearchBy.getText();
 					try {
-						PlayerID = baza.searchByFirstName(name);
-						SearchGUI.SearchWindow(PlayerID, baza);
+						PlayerData = baza.searchByFirstName(name);
+						SearchGUI.SearchWindow(PlayerData, baza);
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

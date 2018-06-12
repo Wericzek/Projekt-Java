@@ -58,3 +58,5 @@
 2018-06-12 15:59:48,420 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
 2018-06-12 16:02:30,423 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
 2018-06-12 16:02:34,961 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 111 - 2-Piotr Nowakowski
+2018-06-12 17:20:25,864 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-12 17:20:30,822 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.searchByFirstName 115 - 2-Piotr Nowakowski

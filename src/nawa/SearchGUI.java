@@ -11,16 +11,16 @@ import javax.swing.JLabel;
 public class SearchGUI {
 
 	private JFrame frame;
-	private int ID;
+	private String PlayerData;
 	private Baza baza;
 	/**
 	 * Launch the application.
 	 */
-	public static void SearchWindow(int ID, Baza baza) {
+	public static void SearchWindow(String PlayerData, Baza baza) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SearchGUI window = new SearchGUI(ID, baza);
+					SearchGUI window = new SearchGUI(PlayerData, baza);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,8 +32,8 @@ public class SearchGUI {
 	/**
 	 * Create the application.
 	 */
-	public SearchGUI(int ID, Baza baza) {
-		this.ID = ID;
+	public SearchGUI(String PlayerData, Baza baza) {
+		this.PlayerData = PlayerData;
 		this.baza = baza;
 		initialize();
 	}
@@ -50,7 +50,7 @@ public class SearchGUI {
 		JTextArea textUserData = new JTextArea();
 		textUserData.setBounds(85, 36, 159, 135);
 		frame.getContentPane().add(textUserData);
-		textUserData.setText(baza.displayLinkedList('p',ID));
+		textUserData.setText(PlayerData);
 		textUserData.setEditable(false);
 		
 		JLabel lblPlayersData = new JLabel("Player's Data:");
