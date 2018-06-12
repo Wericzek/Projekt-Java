@@ -17,7 +17,7 @@ public class Baza {
 	static final Logger log = Logger.getLogger(Log4j.class);
 	LinkedList<Coach> coachesList =  new LinkedList<Coach>();
 	static LinkedList<Player> playersList = new LinkedList<Player>();
-	int index;
+	int logedPlayerID;
 	Connection con;
 	Player player;
 	Coach  coach;
@@ -36,38 +36,6 @@ public class Baza {
        String name = null;
 
 	   baza.showAllPlayers(name);
-       //testy 
-      // baza.loadPlayers();
-      // baza.searchByFirstName("Piotr");
-       //con.close();
-       
-       
-       
-/*		String SQL = "SELECT * FROM player;";
-		String Coach = "SELECT * FROM coach;";
-		
-		
-		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery(SQL);
-		
-		Statement coach = con.createStatement();
-		ResultSet rcoach = coach.executeQuery(Coach);
-
-
-		while (rs.next()) {			
-			log.debug(rs.getInt("id") + " - " + rs.getString("first_name") + " " + rs.getString("surname"));
-			
-		}
-		
-		while(rcoach.next()) {
-			log.debug(rcoach.getInt("id") + "-" + rcoach.getString("first_name") + " "+rcoach.getString("surname"));
-		}
-
-		rs.close();
-		st.close();
-		coach.close();
-		rcoach.close();
-		con.close();*/
 		
 }
 		public LinkedList<Coach> loadCoaches() throws SQLException{
@@ -111,11 +79,13 @@ public class Baza {
 			ResultSet rt_name2 = st_name2.executeQuery(zapytanie2);
 			String PlayerData = "";
 			String enter = "\n";
-			while(rt_name.next()) {
-				log.debug(rt_name.getInt("id") + "-" + rt_name.getString("first_name") + " "+rt_name.getString("surname"));
+			int index = 0;
+			while(rt_name.next()) {				
 				PlayerData += enter + "name: " + rt_name.getString("first_name") + enter + "Surname: " + rt_name.getString("surname") +
 						      enter + "Age: " + rt_name.getInt("age") + enter + "Height: " + rt_name.getInt("height") + enter + "Spike: " +
-						      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " + rt_name2.getString("name");
+						      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " +
+						      rt_name2.getString("name") + enter + enter;
+			    index++;
 			}
 			st_name.close();
 			rt_name.close();

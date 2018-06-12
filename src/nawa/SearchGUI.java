@@ -1,12 +1,16 @@
 package nawa;
 
+
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-import javax.swing.JTextPane;
-import java.awt.BorderLayout;
-import javax.swing.JTextArea;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class SearchGUI {
 
@@ -42,17 +46,23 @@ public class SearchGUI {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 341, 228);
+		frame = new JFrame();		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setBounds(100, 100, 344, 347);
 		
 		JTextArea textUserData = new JTextArea();
-		textUserData.setBounds(85, 36, 159, 135);
-		frame.getContentPane().add(textUserData);
+		textUserData.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		textUserData.setText(PlayerData);
-		textUserData.setEditable(false);
+		textUserData.setLineWrap(true);
+		textUserData.setEditable(false);	
 		
+		JScrollPane scrollUserData = new JScrollPane(textUserData, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		scrollUserData.setBounds(60, 30, 200, 250);
+		frame.getContentPane().add(scrollUserData);
+		
+		
+				
 		JLabel lblPlayersData = new JLabel("Player's Data:");
 		lblPlayersData.setBounds(116, 11, 112, 14);
 		frame.getContentPane().add(lblPlayersData);

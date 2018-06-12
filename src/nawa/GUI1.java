@@ -64,7 +64,7 @@ import log4j.pack.Log4j;
 
 		private void initialize() {
 			frame = new JFrame();
-			frame.setBounds(100, 100, 450, 300);
+			frame.setBounds(100, 100, 449, 301);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.getContentPane().setLayout(null);
 			
@@ -104,7 +104,9 @@ import log4j.pack.Log4j;
 								} 
 							    else {
 								JFrame errorFrame = new JFrame("Wrong Password or Login");
-								JOptionPane.showMessageDialog(errorFrame, "Incorrect Login or Password");
+								JOptionPane.showMessageDialog(errorFrame, "Incorrect Login or Password, try again");
+								txtUsername.setText("");
+								txtPassword.setText("");
 								
 								}
 							}
@@ -114,13 +116,14 @@ import log4j.pack.Log4j;
 										GUI3.PlayerWindow(baza);
 								}
 								else {
-									System.out.println("Haslo jest nie poprawne");
-									// zrobic wyswietlenie informacji o niepoprawnym hasle
+									JFrame errorFrame = new JFrame("Wrong Password or Login");
+									JOptionPane.showMessageDialog(errorFrame, "Incorrect Login or Password, try again");
+									txtUsername.setText("");
+									txtPassword.setText("");									
 								}
 							}
 							
 						} catch (SQLException ex) {
-							// TODO Auto-generated catch block
 							ex.printStackTrace();
 						}
 						
@@ -128,7 +131,7 @@ import log4j.pack.Log4j;
 				}
 			});
 
-			btnLogin.setBounds(295, 153, 89, 23);
+			btnLogin.setBounds(294, 153, 89, 23);
 			frame.getContentPane().add(btnLogin);
 			
 			JSeparator separator = new JSeparator();
@@ -160,11 +163,11 @@ import log4j.pack.Log4j;
 					}		
 				}
 			});
-			btnExit.setBounds(335, 227, 89, 23);
+			btnExit.setBounds(364, 228, 59, 23);
 			frame.getContentPane().add(btnExit);
 			
 			rdbtnCoach = new JRadioButton("coach");
-			rdbtnCoach.setBounds(75, 153, 109, 23);
+			rdbtnCoach.setBounds(215, 150, 64, 23);
 			frame.getContentPane().add(rdbtnCoach);
 			
 			frame.setVisible(true);
