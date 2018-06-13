@@ -76,7 +76,8 @@ public class GUI2 {
 		btnShowPlayers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				try {
-					Player search = baza.showAllPlayers(name);
+					PlayerData = baza.showAllPlayers();
+					SearchGUI.SearchWindow(PlayerData, baza);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -31,13 +31,7 @@ public class Baza {
 
 	}
 
-	public static void main(String[] args) throws SQLException  {
-       Baza baza = new Baza();
-       String name = null;
 
-	   baza.showAllPlayers(name);
-		
-}
 		public LinkedList<Coach> loadCoaches() throws SQLException{
 			Statement st_lista = con.createStatement();
 			String comand = "SELECT * FROM coach;";
@@ -117,16 +111,22 @@ public class Baza {
 				return PlayerData;
 			
 		}
-		public Player showAllPlayers(String name) throws SQLException {
+		public String showAllPlayers() throws SQLException {
 			Statement st_showAll = con.createStatement();
 			String zapytanie = "SELECT * from player";
-			ResultSet rt_showAll= st_showAll.executeQuery(zapytanie);
+			ResultSet rt_showAll= st_showAll.executeQuery(zapytanie);			
+			String allPlayers = "";
+			String enter = "\n";
 			while(rt_showAll.next()) {
-				log.debug(rt_showAll.getInt("id") + "-" + rt_showAll.getString("first_name") + " "+rt_showAll.getString("surname"));
+				
+				allPlayers += enter + "name: " + rt_showAll.getString("first_name") + enter + "Surname: " + rt_showAll.getString("surname") +
+					      enter + "Age: " + rt_showAll.getInt("age") + enter + "Height: " + rt_showAll.getInt("height") + enter + "Spike: " +
+					      rt_showAll.getInt("Spike") + enter + "Block: " + rt_showAll.getInt("Block") + enter + "Club: " +
+					      rt_showAll.getString("clubID") + enter + enter;				
 			}
 			st_showAll.close();
 			rt_showAll.close();
-			return null;
+			return allPlayers;
 			
 		}
 		

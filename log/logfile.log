@@ -7,3 +7,8 @@
 2018-06-13 12:02:56,310 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 125 - 3-Piotr Nowak
 2018-06-13 12:03:26,025 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
 2018-06-13 12:04:06,059 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-13 12:17:41,057 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-13 12:24:54,420 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-13 12:26:47,725 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-13 12:27:17,617 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-13 12:27:48,574 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
