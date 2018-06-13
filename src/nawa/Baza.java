@@ -90,6 +90,31 @@ public class Baza {
 			st_name.close();
 			rt_name.close();
 			return PlayerData;
+		}
+			
+			
+			
+			
+			public String searchByUsername(String username) throws SQLException {
+				Statement st_name = con.createStatement();
+				Statement st_name2 = con.createStatement();
+				String zapytanie = "SELECT * from player where login='"+username+"';";
+				String zapytanie2 ="SELECT a.name, b.first_name FROM Club a NATURAL JOIN Player b WHERE login='"+username+"';";
+				ResultSet rt_name = st_name.executeQuery(zapytanie);
+				ResultSet rt_name2 = st_name2.executeQuery(zapytanie2);
+				String PlayerData = "";
+				String enter = "\n";
+				int index = 0;
+				while(rt_name.next()) {				
+					PlayerData += enter + "name: " + rt_name.getString("first_name") + enter + "Surname: " + rt_name.getString("surname") +
+							      enter + "Age: " + rt_name.getInt("age") + enter + "Height: " + rt_name.getInt("height") + enter + "Spike: " +
+							      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " +
+							      rt_name2.getString("name") + enter + enter;
+				    index++;
+				}
+				st_name.close();
+				rt_name.close();
+				return PlayerData;
 			
 		}
 		public Player showAllPlayers(String name) throws SQLException {

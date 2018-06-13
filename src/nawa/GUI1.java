@@ -113,7 +113,7 @@ import log4j.pack.Log4j;
 							else {
 								String pass = baza.getPassword(txtUsername.getText(), "Player"); 
 								if(pass.equals(txtPassword.getText())) {
-										GUI3.PlayerWindow(baza);
+										GUI3.PlayerWindow(baza, txtUsername.getText());
 								}
 								else {
 									JFrame errorFrame = new JFrame("Wrong Password or Login");
