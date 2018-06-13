@@ -1,14 +1,15 @@
-2018-06-13 11:55:19,841 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 11:55:36,730 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 11:57:05,394 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 11:57:31,973 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:02:56,303 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 125 - 1-Bartosz Kurek
-2018-06-13 12:02:56,310 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 125 - 2-Piotr Nowakowski
-2018-06-13 12:02:56,310 DEBUG [main] - log4j.pack.Log4j.showAllPlayers 125 - 3-Piotr Nowak
-2018-06-13 12:03:26,025 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:04:06,059 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:17:41,057 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:24:54,420 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:26:47,725 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:27:17,617 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
-2018-06-13 12:27:48,574 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:03:24,649 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:06:05,642 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:12:08,694 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:13:56,044 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:15:22,411 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:16:04,268 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:20:03,510 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:21:49,599 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:24:20,806 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:24:37,033 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:24:38,208 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:25:02,488 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:25:24,317 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:25:53,127 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened
+2018-06-14 00:27:31,966 DEBUG [AWT-EventQueue-0] - log4j.pack.Log4j.actionPerformed 96 - Action event happened

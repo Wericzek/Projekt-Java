@@ -145,6 +145,45 @@ public class GUI2 {
 						e.printStackTrace();
 					}
 				}
+				if(chckbxAge.isSelected()==true) {
+					String age = textSearchBy.getText();
+					try {
+						PlayerData = baza.searchByAge(age);
+						SearchGUI.SearchWindow(PlayerData, baza);
+					} catch(SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				
+				if(chckbxSurname.isSelected() == true) {
+					String surname = textSearchBy.getText();
+					try {
+						PlayerData = baza.searchBySurname(surname);
+						SearchGUI.SearchWindow(PlayerData, baza);
+					} catch(SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				
+				if(chckbxHeight.isSelected() == true) {
+					String height = textSearchBy.getText();
+					try {
+						PlayerData = baza.searchByHeight(height);
+						SearchGUI.SearchWindow(PlayerData, baza);
+					} catch(SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				
+				if(chckbxClub.isSelected() == true) {
+					String club = textSearchBy.getText();
+					try {
+						PlayerData = baza.searchByClub(club);
+						SearchGUI.SearchWindow(PlayerData, baza);
+					}catch(SQLException e){
+						e.printStackTrace();
+					}
+				}
 			}
 		});
 		btnSearch.setBounds(383, 134, 100, 30);

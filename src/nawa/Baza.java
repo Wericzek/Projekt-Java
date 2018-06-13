@@ -111,6 +111,106 @@ public class Baza {
 				return PlayerData;
 			
 		}
+			
+			public String searchByAge(String age) throws SQLException {
+				Statement st_name = con.createStatement();
+				Statement st_name2 = con.createStatement();
+				String zapytanie = "SELECT * from player where age='"+age+"';";
+				String zapytanie2 ="SELECT a.name, b.first_name FROM Club a NATURAL JOIN Player b WHERE age='"+age+"';";
+				ResultSet rt_name = st_name.executeQuery(zapytanie);
+				ResultSet rt_name2 = st_name2.executeQuery(zapytanie2);
+				String PlayerData = "";
+				String enter = "\n";
+				int index = 0;
+				while(rt_name.next()) {				
+					PlayerData += enter + "name: " + rt_name.getString("first_name") + enter + "Surname: " + rt_name.getString("surname") +
+							      enter + "Age: " + rt_name.getInt("age") + enter + "Height: " + rt_name.getInt("height") + enter + "Spike: " +
+							      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " +
+							      rt_name2.getString("name") + enter + enter;
+				    index++;
+				}
+				st_name.close();
+				rt_name.close();
+				return PlayerData;
+			
+		}
+			
+
+			public String searchByHeight(String height) throws SQLException {
+				Statement st_name = con.createStatement();
+				Statement st_name2 = con.createStatement();
+				String zapytanie = "SELECT * from player where height='"+height+"';";
+				String zapytanie2 ="SELECT a.name, b.first_name FROM Club a NATURAL JOIN Player b WHERE height='"+height+"';";
+				ResultSet rt_name = st_name.executeQuery(zapytanie);
+				ResultSet rt_name2 = st_name2.executeQuery(zapytanie2);
+				String PlayerData = "";
+				String enter = "\n";
+				int index = 0;
+				while(rt_name.next()) {				
+					PlayerData += enter + "name: " + rt_name.getString("first_name") + enter + "Surname: " + rt_name.getString("surname") +
+							      enter + "Age: " + rt_name.getInt("age") + enter + "Height: " + rt_name.getInt("height") + enter + "Spike: " +
+							      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " +
+							      rt_name2.getString("name") + enter + enter;
+				    index++;
+				}
+				st_name.close();
+				rt_name.close();
+				return PlayerData;
+			
+		}
+			
+
+			public String searchByClub(String club) throws SQLException {
+				Statement st_name = con.createStatement();
+				Statement st_name2 = con.createStatement();
+				String zapytanie = "SELECT * FROM Player NATURAL JOIN Club a where a.name='"+club+"';";
+				
+				String zapytanie2 ="SELECT name from Club WHERE name='"+club+"';";
+				ResultSet rt_name = st_name.executeQuery(zapytanie);
+				ResultSet rt_name2 = st_name2.executeQuery(zapytanie2);
+				String PlayerData = "";
+				String enter = "\n";
+				int index = 0;
+				while(rt_name.next()) {				
+					PlayerData += enter + "name: " + rt_name.getString("first_name") + enter + "Surname: " + rt_name.getString("surname") +
+							      enter + "Age: " + rt_name.getInt("age") + enter + "Height: " + rt_name.getInt("height") + enter + "Spike: " +
+							      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " +
+							      rt_name2.getString("name") + enter + enter;
+				    index++;
+				}
+				st_name.close();
+				rt_name.close();
+				return PlayerData;
+			
+		}
+
+			
+			public String searchBySurname(String surname) throws SQLException {
+				Statement st_name = con.createStatement();
+				Statement st_name2 = con.createStatement();
+				String zapytanie = "SELECT * from player where surname='"+surname+"';";
+				String zapytanie2 ="SELECT a.name, b.first_name FROM Club a NATURAL JOIN Player b WHERE surname='"+surname+"';";
+				ResultSet rt_name = st_name.executeQuery(zapytanie);
+				ResultSet rt_name2 = st_name2.executeQuery(zapytanie2);
+				String PlayerData = "";
+				String enter = "\n";
+				int index = 0;
+				while(rt_name.next()) {				
+					PlayerData += enter + "name: " + rt_name.getString("first_name") + enter + "Surname: " + rt_name.getString("surname") +
+							      enter + "Age: " + rt_name.getInt("age") + enter + "Height: " + rt_name.getInt("height") + enter + "Spike: " +
+							      rt_name.getInt("Spike") + enter + "Block: " + rt_name.getInt("Block") + enter + "Club: " +
+							      rt_name2.getString("name") + enter + enter;
+				    index++;
+				}
+				st_name.close();
+				rt_name.close();
+				return PlayerData;
+			
+		}
+			
+			
+			
+			
 		public String showAllPlayers() throws SQLException {
 			Statement st_showAll = con.createStatement();
 			String zapytanie = "SELECT * from player";
