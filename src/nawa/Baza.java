@@ -184,7 +184,6 @@ public class Baza {
 			
 		}
 
-			
 			public String searchBySurname(String surname) throws SQLException {
 				Statement st_name = con.createStatement();
 				Statement st_name2 = con.createStatement();

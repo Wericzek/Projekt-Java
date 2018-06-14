@@ -76,7 +76,7 @@ public class SearchGUI {
 				frame.dispose();
 			}
 		});
-		btnExit.setBounds(229, 285, 89, 23);
+		btnExit.setBounds(239, 285, 89, 23);
 		frame.getContentPane().add(btnExit);
 	}
 }
