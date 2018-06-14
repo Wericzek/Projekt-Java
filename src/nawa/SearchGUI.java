@@ -11,6 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class SearchGUI {
 
@@ -66,5 +69,14 @@ public class SearchGUI {
 		JLabel lblPlayersData = new JLabel("Player's Data:");
 		lblPlayersData.setBounds(116, 11, 112, 14);
 		frame.getContentPane().add(lblPlayersData);
+		
+		JButton btnExit = new JButton("EXIT");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		btnExit.setBounds(229, 285, 89, 23);
+		frame.getContentPane().add(btnExit);
 	}
 }

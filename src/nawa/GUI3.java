@@ -92,12 +92,38 @@ public class GUI3 {
 						e1.printStackTrace();
 					}
 				}
+				if(chckbxSurname.isSelected() == true) {
+					String surname = txtSearchby.getText();
+					try {
+						PlayerData = baza.searchBySurname(surname);
+						SearchGUI.SearchWindow(PlayerData, baza);
+					} catch(SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+				
+				if(chckbxClub.isSelected() == true) {
+					String club = txtSearchby.getText();
+					try {
+						PlayerData =baza.searchByClub(club);
+						SearchGUI.SearchWindow(PlayerData, baza);
+					} catch(SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
 			}
 		});
 		btnSearch.setBounds(105, 106, 94, 23);
 		frame.getContentPane().add(btnSearch);
 		
 		JButton btnExit = new JButton("EXIT");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			      
+			      frame.dispose();
+			}
+		});
 		btnExit.setBounds(95, 188, 115, 23);
 		frame.getContentPane().add(btnExit);
 		

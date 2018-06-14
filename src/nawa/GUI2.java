@@ -50,7 +50,7 @@ public class GUI2 {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(200, 200, 518, 379);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JTextPane txtTitle = new JTextPane();
@@ -103,9 +103,12 @@ public class GUI2 {
 		
 	}
 		});
-		JButton btnExit = new JButton("Exit");
+		/*JButton btnExit = new JButton("Exit");
 		btnExit.setBounds(390, 300, 100, 30);
-		frame.getContentPane().add(btnExit);
+		frame.getContentPane().add(btnExit);*/
+		
+		
+		
 		
 		textSearchBy = new JTextField();
 		textSearchBy.setBounds(30, 31, 453, 20);
@@ -204,7 +207,16 @@ public class GUI2 {
 		panel_1.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
 		frame.getContentPane().add(panel_1);
 		
-		btnExit.addActionListener(new ActionListener() {
+		JButton btnExit_1 = new JButton("Exit");
+		btnExit_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		btnExit_1.setBounds(403, 306, 89, 23);
+		frame.getContentPane().add(btnExit_1);
+		
+	/*	btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				JFrame exitFrame = new JFrame("Exit");
 				if(JOptionPane.showConfirmDialog(exitFrame, "Confirm if you want to exit", "Players Database",
@@ -214,7 +226,7 @@ public class GUI2 {
 	}
 
 			
-		});
+		});*/
 
 
 }
