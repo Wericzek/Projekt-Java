@@ -91,6 +91,7 @@ public class GUI2 {
 		frame.getContentPane().add(btnAddPlayer);
 		btnAddPlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
+				AddGui.main(null);
 				
 			}
 		});
