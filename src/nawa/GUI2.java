@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -91,6 +92,9 @@ public class GUI2 {
 		frame.getContentPane().add(btnAddPlayer);
 		btnAddPlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
+				//AddGui window = new AddGui(baza); 
+				//window.setVisible(true);
+				AddGui.main(null);
 				
 			}
 		});
