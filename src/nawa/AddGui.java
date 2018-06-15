@@ -67,58 +67,58 @@ public class AddGui {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblID = new JLabel("ID");
+		/*JLabel lblID = new JLabel("ID");
 		lblID.setBounds(10, 30, 60, 20);
 		frame.getContentPane().add(lblID);
 		
 		txtID = new JTextField();
 		txtID.setBounds(80, 30, 110, 20);
 		frame.getContentPane().add(txtID);
-		txtID.setColumns(10);
+		txtID.setColumns(10);*/
 		
 		JLabel lblFirstName = new JLabel("First name");
-		lblFirstName.setBounds(10, 70, 60, 20);
+		lblFirstName.setBounds(10, 30, 60, 20);
 		frame.getContentPane().add(lblFirstName);
 		
 		txtFirstName = new JTextField();
-		txtFirstName.setBounds(80, 70, 110, 20);
+		txtFirstName.setBounds(80, 30, 110, 20);
 		frame.getContentPane().add(txtFirstName);
 		txtFirstName.setColumns(10);
 		
 		JLabel lblSurname = new JLabel("Surname");
-		lblSurname.setBounds(10, 110, 60, 20);
+		lblSurname.setBounds(10, 70, 60, 20);
 		frame.getContentPane().add(lblSurname);
 		
 		txtSurname = new JTextField();
 		txtSurname.setColumns(10);
-		txtSurname.setBounds(80, 110, 110, 20);
+		txtSurname.setBounds(80, 70, 110, 20);
 		frame.getContentPane().add(txtSurname);
 		
 		JLabel lblLogin = new JLabel("Login");
-		lblLogin.setBounds(10, 150, 60, 20);
+		lblLogin.setBounds(10, 110, 60, 20);
 		frame.getContentPane().add(lblLogin);
 		
 		txtLogin = new JTextField();
 		txtLogin.setColumns(10);
-		txtLogin.setBounds(80, 150, 110, 20);
+		txtLogin.setBounds(80, 110, 110, 20);
 		frame.getContentPane().add(txtLogin);
 		
 		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(10, 190, 60, 20);
+		lblPassword.setBounds(10, 150, 60, 20);
 		frame.getContentPane().add(lblPassword);
 		
 		txtPassword = new JTextField();
 		txtPassword.setColumns(10);
-		txtPassword.setBounds(80, 190, 110, 20);
+		txtPassword.setBounds(80, 150, 110, 20);
 		frame.getContentPane().add(txtPassword);
 		
 		JLabel lblAge = new JLabel("Age");
-		lblAge.setBounds(10, 230, 60, 20);
+		lblAge.setBounds(10, 190, 60, 20);
 		frame.getContentPane().add(lblAge);
 		
 		txtAge = new JTextField();
 		txtAge.setColumns(10);
-		txtAge.setBounds(80, 230, 110, 20);
+		txtAge.setBounds(80, 190, 110, 20);
 		frame.getContentPane().add(txtAge);
 		
 		JLabel lblNewLabel = new JLabel("Height");
@@ -178,20 +178,20 @@ public class AddGui {
 				try {
 			
 			    
-				String query="INSERT INTO Player (ID,first_name, surname,login,password,age,height,spike,block,positionID,clubID) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+				String query="INSERT INTO Player (first_name, surname,login,password,age,height,spike,block,positionID,clubID) VALUES (?,?,?,?,?,?,?,?,?,?)";
 				PreparedStatement st1 = baza.con.prepareStatement(query);
 				
-				st1.setString(1,txtID.getText());
-				st1.setString(2,txtFirstName.getText());
-				st1.setString(3, txtSurname.getText());
-				st1.setString(4, txtLogin.getText());
-				st1.setString(5, txtPassword.getText());
-				st1.setString(6, txtAge.getText());
-				st1.setString(7, txtHeight.getText());
-				st1.setString(8, txtSpike.getText());
-				st1.setString(9, txtBlock.getText());
-				st1.setString(10, txtPosition.getText());
-				st1.setString(11, txtClub.getText());
+		
+				st1.setString(1,txtFirstName.getText());
+				st1.setString(2, txtSurname.getText());
+				st1.setString(3, txtLogin.getText());
+				st1.setString(4, txtPassword.getText());
+				st1.setString(5, txtAge.getText());
+				st1.setString(6, txtHeight.getText());
+				st1.setString(7, txtSpike.getText());
+				st1.setString(8, txtBlock.getText());
+				st1.setString(9, txtPosition.getText());
+				st1.setString(10, txtClub.getText());
 				
 				st1.execute();
 				
