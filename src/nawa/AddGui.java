@@ -1,5 +1,6 @@
 package nawa;
 
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -16,18 +17,27 @@ public class AddGui {
 
 	//String connectionUrl = "jdbc:sqlite:lib/BazaProjekt.db";
 	private JFrame frame;
-	private JTextField txtID;
-	private JTextField txtFirstName;
-	private JTextField txtSurname;
-	private JTextField txtLogin;
-	private JTextField txtPassword;
-	private JTextField txtAge;
-	private JTextField txtHeight;
-	private JTextField txtSpike;
-	private JTextField txtBlock;
-	private JTextField txtPosition;
-	private JTextField txtClub;
+	public JTextField txtID;
+	public JTextField txtFirstName;
+	public JTextField txtSurname;
+	public JTextField txtLogin;
+	public JTextField txtPassword;
+	public JTextField txtAge;
+	public JTextField txtHeight;
+	public JTextField txtSpike;
+	public JTextField txtBlock;
+	public JTextField txtPosition;
+	public JTextField txtClub;
 	Baza baza;
+	String object ="";
+	
+	
+	public JTextField gettxtFirstName() {
+		return txtFirstName;
+	}
+	public void setTxtFirstName (JTextField txtFirstName) {
+		this.txtFirstName = txtFirstName;
+	}
 	
 	/**
 	 * Launch the application.
@@ -49,7 +59,7 @@ public class AddGui {
 						e1.printStackTrace();
 					}
 			
-				}
+	}
 	/**
 	 * Create the application.
 	 */
@@ -173,41 +183,27 @@ public class AddGui {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-			
+				String first_name = txtFirstName.getText();
+				String surname = txtSurname.getText();
+				String login = txtLogin.getText();
+				String password = txtPassword.getText();
+				String age = txtAge.getText();
+				String height = txtHeight.getText();
+				String spike = txtSpike.getText();
+				String block = txtBlock.getText();
+				String position = txtPosition.getText();
+				String club = txtClub.getText();
 				
 				try {
-			
-			    
-				String query="INSERT INTO Player (first_name, surname,login,password,age,height,spike,block,positionID,clubID) VALUES (?,?,?,?,?,?,?,?,?,?)";
-				PreparedStatement st1 = baza.con.prepareStatement(query);
-				
-			
-				st1.setString(1,txtFirstName.getText());
-				st1.setString(2, txtSurname.getText());
-				st1.setString(3, txtLogin.getText());
-				st1.setString(4, txtPassword.getText());
-				st1.setString(5, txtAge.getText());
-				st1.setString(6, txtHeight.getText());
-				st1.setString(7, txtSpike.getText());
-				st1.setString(8, txtBlock.getText());
-				st1.setString(9, txtPosition.getText());
-				st1.setString(10, txtClub.getText());
-				
-				st1.execute();
-				
-				JOptionPane.showMessageDialog(null, "Zapisano");
-				
-				st1.close();
-			
+					
+					object = baza.addPlayer( first_name, surname, login, password, age, height, spike, block, position, club);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				catch (Exception ex) {
-					ex.printStackTrace();
-				}
-				
-			    
-			}
+			}	
 		});
-		
+				
 		JButton btnExit = new JButton("EXIT");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -216,5 +212,6 @@ public class AddGui {
 		});
 		btnExit.setBounds(300, 300, 110, 20);
 		frame.getContentPane().add(btnExit);
-	}
-}
+				}
+			}
+		

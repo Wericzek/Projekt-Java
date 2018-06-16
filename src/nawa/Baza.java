@@ -1,11 +1,14 @@
 package nawa;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedList;
+
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 import org.apache.log4j.Logger;
 
@@ -22,6 +25,8 @@ public class Baza {
 	Player player;
 	Coach  coach;
 	String real_password = null;
+	
+	
 		
 	public Baza() throws SQLException {
 		DriverManager.registerDriver(new org.sqlite.JDBC());
@@ -229,11 +234,18 @@ public class Baza {
 			
 		}
 		
-		public void addPlayer(Player player) throws SQLException{
-			Statement st_Player = con.createStatement();
-			String zapytanie = "INSERT INTO Player (first_name, surname) ; VALUES ('" + player.getFirst_Name() + "', '" + player.getSurname() + "')";
-			st_Player.executeQuery(zapytanie);
+		public String addPlayer(String first_name, String surname, String login, String password, String age, String height, String spike, String block, String position, String club) throws SQLException {
+			
+            Statement st1 = con.createStatement();
+			String query = "INSERT INTO Player (first_name, surname, login, password, age, height, spike, block, positionID, clubID) VALUES ('"+first_name+"','"+surname+"','"+login+"','"+password+"','"+age+"','"+height+"','"+spike+"','"+block+"','"+position+"','"+club+"')"; 
+					
+			
+			
+			st1.execute(query);
+			st1.close();
+			return null;
 		}
+		
 		
 		public String getPassword(String login, String table) throws SQLException {
 			Statement st_pswd = con.createStatement();
@@ -270,6 +282,11 @@ public class Baza {
 			
 			return stats;
 		}
+
+
+		
+
+		
 
        
 
