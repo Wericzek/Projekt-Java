@@ -3,6 +3,7 @@ package nawa;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -10,6 +11,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 
 public class GUI3 {
 
@@ -18,6 +20,7 @@ public class GUI3 {
 	private JTextField txtSearchby;
 	String username;
 	String PlayerData;
+	private JPasswordField newPasswordField;
 	
 	/**
 	 * Launch the application.
@@ -44,7 +47,7 @@ public class GUI3 {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 231, 256);
+		frame.setBounds(100, 100, 243, 317);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -59,7 +62,7 @@ public class GUI3 {
 				}
 			}
 		});
-		btnShowProfile.setBounds(95, 156, 115, 23);
+		btnShowProfile.setBounds(95, 207, 115, 23);
 		frame.getContentPane().add(btnShowProfile);
 		
 		txtSearchby = new JTextField();
@@ -124,11 +127,33 @@ public class GUI3 {
 			      frame.dispose();
 			}
 		});
-		btnExit.setBounds(95, 188, 115, 23);
+		btnExit.setBounds(95, 241, 115, 23);
 		frame.getContentPane().add(btnExit);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 11, 200, 127);
 		frame.getContentPane().add(panel);
+		
+		newPasswordField = new JPasswordField();
+		newPasswordField.setBounds(10, 169, 77, 20);
+		frame.getContentPane().add(newPasswordField);
+		
+		JButton btnChangePass = new JButton("CHANGE PASS");
+		btnChangePass.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					baza.changePassword(username, newPasswordField.getText());
+					JFrame errorFrame = new JFrame("Password update");
+					JOptionPane.showMessageDialog(errorFrame, "Password succesfully changed");					
+					newPasswordField.setText("");
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnChangePass.setBounds(95, 168, 115, 23);
+		frame.getContentPane().add(btnChangePass);
 	}
 }

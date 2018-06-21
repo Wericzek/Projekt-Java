@@ -196,7 +196,7 @@ public class AddGui {
 				
 				try {
 					
-					object = baza.addPlayer( first_name, surname, login, password, age, height, spike, block, position, club);
+					 baza.addPlayer( first_name, surname, login, password, age, height, spike, block, position, club);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

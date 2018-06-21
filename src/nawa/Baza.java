@@ -234,16 +234,26 @@ public class Baza {
 			
 		}
 		
-		public String addPlayer(String first_name, String surname, String login, String password, String age, String height, String spike, String block, String position, String club) throws SQLException {
+		public void addPlayer(String first_name, String surname, String login, String password, String age, String height, String spike, String block, String position, String club) throws SQLException {
 			
             Statement st1 = con.createStatement();
 			String query = "INSERT INTO Player (first_name, surname, login, password, age, height, spike, block, positionID, clubID) VALUES ('"+first_name+"','"+surname+"','"+login+"','"+password+"','"+age+"','"+height+"','"+spike+"','"+block+"','"+position+"','"+club+"')"; 
-					
+				
 			
 			
 			st1.execute(query);
 			st1.close();
-			return null;
+		
+			
+		}
+		
+		public void changePassword(String username, String password) throws SQLException {
+			
+			Statement st2 = con.createStatement();
+			
+			String zapytanie = "UPDATE Player SET password='"+password+"' WHERE login='"+username+"';";
+			st2.execute(zapytanie);
+			st2.close();
 		}
 		
 		
